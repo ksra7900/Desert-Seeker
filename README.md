@@ -27,4 +27,4 @@ This project applies the same principle to automatically explore and optimize de
 ```bash
 git clone https://github.com/USERNAME/desertseeker.git
 cd desertseeker
-pip install -r requirements.txt```
+pip install -r requirements.txt
