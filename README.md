@@ -19,3 +19,12 @@ This project applies the same principle to automatically explore and optimize de
 - Search space includes layers, neurons, and types of neural operations.  
 - Flexible objective functions (e.g., accuracy, loss, multi-objective trade-offs).  
 - Lightweight, easy-to-implement, and extensible codebase.
+
+---
+
+## 🚀 Quick Start
+### Installation
+```bash
+git clone https://github.com/USERNAME/desertseeker.git
+cd desertseeker
+pip install -r requirements.txt```
