@@ -1,5 +1,5 @@
 import numpy as np
-from trial import Trial
+from desertseeker.trial import Trial
 import random
 import math
 
@@ -68,6 +68,10 @@ class SCSO:
                     # check type
                     if parameters[i][key]['type'] == 'int':
                         pos[key]= int(pos[key])
+                        
+                    if parameters[i][key]['type'] == 'categorical':
+                        choices= parameters[i][key]['choices']
+                        pos[key]= min(choices, key= lambda x: abs(x - pos[key]))
                     i+= 1
                     
         # exploration
@@ -89,6 +93,9 @@ class SCSO:
                     # check type
                     if parameters[i][key]['type'] == 'int':
                         pos[key]= int(pos[key])
+                    if parameters[i][key]['type'] == 'categorical':
+                        choices= parameters[i][key]['choices']
+                        pos[key]= min(choices, key= lambda x: abs(x - pos[key]))
                     i+= 1
         
         return values

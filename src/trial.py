@@ -54,6 +54,7 @@ class Trial:
             # generate value
             value= random.choice(choices)
             self.values[name]= value
+            return value
         # set static value
         else:
             value= self.static_values[name]
@@ -63,7 +64,7 @@ class Trial:
         
 if __name__ == '__main__':
     def objective(trial):
-        x= trial.suggest_float('xy', 5.25, 10.75)
+        x= trial.suggest_categorical('xy', [5.25, 10.75])
         return x + 1
 
     def first_population(pop_size, objective):
